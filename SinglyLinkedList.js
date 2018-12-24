@@ -93,4 +93,4 @@ sll.insertAtEnd(5);
 sll.insertAtBeginning(1);
 sll.insertAtPosition(1, 2);
 // sll.print();
-console.log(sll.size());
+// console.log(sll.size());
