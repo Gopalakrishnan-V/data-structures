@@ -55,13 +55,70 @@ class SinglyLinkedList {
   }
 
   //Deletion
-  deleteFirstNode() {}
+  deleteFirstNode() {
+    if (!this.head) {
+      return;
+    }
+    this.head = this.head.next;
+  }
 
-  deleteLastNode() {}
+  deleteLastNode() {
+    if (!this.head) {
+      return;
+    }
+    if (!this.head.next) {
+      this.head = null;
+      return;
+    }
+    let previous = null;
+    let current = this.head;
+    while (current.next) {
+      previous = current;
+      current = current.next;
+    }
+    if (previous) {
+      previous.next = null;
+    }
+  }
 
-  deleteByKey() {}
+  deleteByKey(key) {
+    if (!this.head) {
+      return;
+    }
+    if (this.head.data === key) {
+      this.head = this.head.next;
+      return;
+    }
+    let previous = null;
+    let current = this.head;
 
-  deleteByPosition() {}
+    while (current && current.data !== key) {
+      previous = current;
+      current = current.next;
+    }
+    if (current) {
+      previous.next = current.next;
+    }
+  }
+
+  deleteByPosition(position) {
+    if (!this.head) {
+      return;
+    }
+    if (position === 0) {
+      this.head = this.head.next;
+      return;
+    }
+    let previous = null;
+    let current = this.head;
+    for (let i = 0; i < position && current; i++) {
+      previous = current;
+      current = current.next;
+    }
+    if (current) {
+      previous.next = current.next;
+    }
+  }
 
   //Other functions
   size() {
@@ -83,7 +140,23 @@ class SinglyLinkedList {
     }
   }
 
-  reverse() {}
+  reverse() {
+    if (!this.head) {
+      return;
+    }
+
+    let previous = null;
+    let current = this.head;
+    let next = null;
+
+    while (current) {
+      next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+    }
+    this.head = previous;
+  }
 }
 
 const sll = new SinglyLinkedList();
@@ -92,5 +165,10 @@ sll.insertAtEnd(4);
 sll.insertAtEnd(5);
 sll.insertAtBeginning(1);
 sll.insertAtPosition(1, 2);
-// sll.print();
-// console.log(sll.size());
+
+console.log("Normal");
+sll.print();
+
+sll.reverse();
+console.log("After reversed");
+sll.print();
