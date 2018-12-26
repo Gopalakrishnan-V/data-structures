@@ -47,6 +47,6 @@ class Searching {
 }
 
 let searching = new Searching();
-// console.log("linearSearch:", searching.linearSearch([3, 1, 5], 2));
-// console.log("binarySearch: ", searching.binarySearch([1, 2, 3, 4, 5, 6], 4));
-// console.log("indexOfSubString: ", searching.indexOfSubString("gopal", "pal"));
+console.log("linearSearch:", searching.linearSearch([3, 1, 5], 2));
+console.log("binarySearch: ", searching.binarySearch([1, 2, 3, 4, 5, 6], 4));
+console.log("indexOfSubString: ", searching.indexOfSubString("gopal", "pal"));
