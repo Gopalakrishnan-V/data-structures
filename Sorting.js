@@ -124,17 +124,5 @@ class QuickSort {
   }
 }
 
-// let bubbleSort = new BubbleSort();
-// console.log("Bubble Sort:", bubbleSort.sort([5, 4, 3, 2, 1]));
-
-// let selectionSort = new SelectionSort();
-// console.log("Selection Sort:", selectionSort.sort([7, 1, 2, 7]));
-
-// let insertionSort = new InsertionSort();
-// console.log("Insertion Sort:", insertionSort.sort([5, 4, 3, 2, 1]));
-
-// let mergeSort = new MergeSort();
-// console.log("Merge Sort:", mergeSort.sort([5, 4, 3, 2, 1]));
-
 let quickSort = new QuickSort();
-console.log("Quick Sort:", quickSort.sort([100, -3, 2, 4, 6, 9, 1, 2, 5, 3, 23]));
+console.log("Quick Sort:", quickSort.sort([1, 2, 5, 3, 23]));
