@@ -50,20 +50,20 @@ class BinarySearchTree {
     console.log(root.data);
   }
 
-  breadthFirstSearch(root = this.root){
-    if(!root){
+  breadthFirstSearch(root = this.root) {
+    if (!root) {
       return [];
     }
     let result = [];
     let queue = [];
     queue.push(root);
-    while(queue.length){
+    while (queue.length) {
       const current = queue.shift();
       result.push(current.data);
-      if(current.left){
+      if (current.left) {
         queue.push(current.left);
       }
-      if(current.right){
+      if (current.right) {
         queue.push(current.right);
       }
     }
@@ -121,27 +121,6 @@ class BinarySearchTree {
     }
     return root;
   }
-  
 }
 
-let bst = new BinarySearchTree();
-bst.insert(2);
-bst.insert(1);
-bst.insert(3);
-bst.insert(0);
-bst.insert(5);
-
-// bst.delete(3);
-// bst.delete(2);
-
-// console.log("PREORDER:");
-// bst.printPreOrder();
-
-// console.log("INORDER:");
-// bst.printInOrder();
-
-// console.log("POSTORDER:");
-// bst.printPostOrder();
-
-console.log("BFS:");
-console.log(bst.breadthFirstSearch());
+module.exports = BinarySearchTree;

@@ -72,12 +72,4 @@ class MaxBinaryHeap {
   }
 }
 
-let maxBinaryHeap = new MaxBinaryHeap();
-maxBinaryHeap.insert(1);
-maxBinaryHeap.insert(2);
-maxBinaryHeap.insert(3);
-maxBinaryHeap.insert(4);
-maxBinaryHeap.insert(5);
-console.log(maxBinaryHeap.values);
-console.log(maxBinaryHeap.extractMax());
-console.log(maxBinaryHeap.values);
+module.exports = MaxBinaryHeap;

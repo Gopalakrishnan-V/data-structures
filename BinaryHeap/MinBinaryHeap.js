@@ -70,14 +70,6 @@ class MinBinaryHeap {
       }
     }
   }
-}
+};
 
-let minBinaryHeap = new MinBinaryHeap();
-minBinaryHeap.insert(1);
-minBinaryHeap.insert(2);
-minBinaryHeap.insert(3);
-minBinaryHeap.insert(4);
-minBinaryHeap.insert(5);
-console.log(minBinaryHeap.values);
-console.log(minBinaryHeap.extractMin());
-console.log(minBinaryHeap.values);
+module.exports = MinBinaryHeap;

@@ -1,10 +1,3 @@
-class Node {
-  constructor(priority, data) {
-    this.priority = priority;
-    this.data = data;
-  }
-}
-
 class PriorityQueue {
   constructor() {
     this.values = [];
@@ -82,12 +75,4 @@ class PriorityQueue {
   }
 }
 
-let priorityQueue = new PriorityQueue();
-priorityQueue.insert(new Node(1, "Iphone X"));
-priorityQueue.insert(new Node(2, "Iphone 8"));
-priorityQueue.insert(new Node(3, "Iphone 7"));
-priorityQueue.insert(new Node(4, "Iphone 6"));
-priorityQueue.insert(new Node(5, "Iphone SE"));
-console.log(priorityQueue.values);
-console.log("Extracted: ", priorityQueue.extractMin());
-console.log(priorityQueue.values);
+module.exports = PriorityQueue;

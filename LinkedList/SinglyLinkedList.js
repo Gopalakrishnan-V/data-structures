@@ -156,16 +156,4 @@ class SinglyLinkedList {
   }
 }
 
-const sll = new SinglyLinkedList();
-sll.insertAtEnd(3);
-sll.insertAtEnd(4);
-sll.insertAtEnd(5);
-sll.insertAtBeginning(1);
-sll.insertAtPosition(1, 2);
-
-console.log("Normal");
-sll.print();
-
-sll.reverse();
-console.log("After reversed");
-sll.print();
+module.exports = SinglyLinkedList;
