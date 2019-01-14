@@ -1,7 +1,6 @@
 const MinBinaryHeap = require("./MinBinaryHeap");
 const MaxBinaryHeap = require("./MaxBinaryHeap");
 const PriorityQueue = require("./PriorityQueue");
-const Node = require("./Node");
 
 // let maxBinaryHeap = new MaxBinaryHeap();
 // maxBinaryHeap.insert(1);
@@ -23,12 +22,12 @@ const Node = require("./Node");
 // console.log(minBinaryHeap.extractMin());
 // console.log(minBinaryHeap.values);
 
-// let priorityQueue = new PriorityQueue();
-// priorityQueue.insert(new Node(1, "Iphone X"));
-// priorityQueue.insert(new Node(2, "Iphone 8"));
-// priorityQueue.insert(new Node(3, "Iphone 7"));
-// priorityQueue.insert(new Node(4, "Iphone 6"));
-// priorityQueue.insert(new Node(5, "Iphone SE"));
-// console.log(priorityQueue.values);
-// console.log("Extracted: ", priorityQueue.extractMin());
-// console.log(priorityQueue.values);
+let priorityQueue = new PriorityQueue();
+priorityQueue.enqueue("Iphone X", 1);
+priorityQueue.enqueue("Iphone 8", 2);
+priorityQueue.enqueue("Iphone 7", 3);
+priorityQueue.enqueue("Iphone 6", 4);
+priorityQueue.enqueue("Iphone SE", 5);
+console.log(priorityQueue.values);
+console.log("Extracted: ", priorityQueue.dequeue());
+console.log(priorityQueue.values);
