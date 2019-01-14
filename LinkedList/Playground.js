@@ -1,18 +1,11 @@
-const SinglyLinkedList = require("./SinglyLinkedList");
-const DoublyLinkedList = require("./DoublyLinkedList");
+const SinglyLinkedList = require("./SinglyLinkedList/SinglyLinkedList");
+const DoublyLinkedList = require("./DoublyLinkedList/DoublyLinkedList");
 
-// const sll = new SinglyLinkedList();
-// sll.insertAtEnd(3);
-// sll.insertAtEnd(4);
-// sll.insertAtEnd(5);
-// sll.insertAtBeginning(1);
-// sll.insertAtPosition(1, 2);
-// console.log("Normal");
-// sll.print();
-// sll.reverse();
-// console.log("After reversed");
-// sll.print();
-
+const sll = new SinglyLinkedList();
+sll.insertAtEnd(3);
+sll.insertAtEnd(4);
+sll.insertAtEnd(5);
+sll.print();
 
 // const dll = new DoublyLinkedList();
 // dll.insertAtEnd(1);
