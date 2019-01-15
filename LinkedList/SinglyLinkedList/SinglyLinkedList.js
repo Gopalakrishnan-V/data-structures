@@ -128,8 +128,8 @@ class SinglyLinkedList {
     return count;
   }
 
-  print() {
-    let current = this.head;
+  print(head) {
+    let current = head;
     console.log("List: ");
     while (current) {
       console.log(current.data);
@@ -137,13 +137,13 @@ class SinglyLinkedList {
     }
   }
 
-  reverse() {
-    if (!this.head) {
-      return;
+  reverse(head) {
+    if (!head) {
+      return null;
     }
 
     let previous = null;
-    let current = this.head;
+    let current = head;
     let next = null;
 
     while (current) {
@@ -152,7 +152,7 @@ class SinglyLinkedList {
       previous = current;
       current = next;
     }
-    this.head = previous;
+    return previous;
   }
 }
 
