@@ -146,6 +146,19 @@ class DoublyLinkedList {
     return count;
   }
 
+  reverse(head) {
+    let current = head;
+    let previous = null;
+    while (current) {
+      const next = current.next;
+      current.next = current.previous;
+      current.previous = next;
+      previous = current;
+      current = next;
+    }
+    return previous;
+  }
+
   print() {
     let current = this.head;
     console.log("List: ");
