@@ -1,23 +1,18 @@
 const BinarySearchTree = require("./BinarySearchTree");
+class Node {
+    constructor(data) {
+      this.data = data;
+      this.left = null;
+      this.right = null;
+    }
+  }
 
 let bst = new BinarySearchTree();
-bst.insert(2);
-bst.insert(1);
+
+bst.insert(9);
+bst.insert(6);
+bst.insert(15);
 bst.insert(3);
-bst.insert(0);
-bst.insert(5);
+bst.insert(21);
 
-// bst.delete(3);
-// bst.delete(2);
-
-// console.log("PREORDER:");
-// bst.printPreOrder();
-
-// console.log("INORDER:");
-// bst.printInOrder();
-
-// console.log("POSTORDER:");
-// bst.printPostOrder();
-
-console.log("BFS:");
-console.log(bst.breadthFirstSearch());
+console.log("Maximum Height: ", bst.getMaximumHeight(bst.root));

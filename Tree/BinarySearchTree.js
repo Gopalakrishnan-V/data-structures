@@ -16,41 +16,29 @@ class BinarySearchTree {
       return;
     }
     console.log(root.data);
-    if (root.left) {
-      this.printPreOrder(root.left);
-    }
-    if (root.right) {
-      this.printPreOrder(root.right);
-    }
+    this.printPreOrder(root.left);
+    this.printPreOrder(root.right);
   }
 
   printInOrder(root = this.root) {
     if (!root) {
       return;
     }
-    if (root.left) {
-      this.printPreOrder(root.left);
-    }
+    this.printInOrder(root.left);
     console.log(root.data);
-    if (root.right) {
-      this.printPreOrder(root.right);
-    }
+    this.printInOrder(root.right);
   }
 
   printPostOrder(root = this.root) {
     if (!root) {
       return;
     }
-    if (root.left) {
-      this.printPreOrder(root.left);
-    }
-    if (root.right) {
-      this.printPreOrder(root.right);
-    }
+    this.printPostOrder(root.left);
+    this.printPostOrder(root.right);
     console.log(root.data);
   }
 
-  breadthFirstSearch(root = this.root) {
+  traverseLevelOrder(root = this.root) {
     if (!root) {
       return [];
     }
@@ -120,6 +108,15 @@ class BinarySearchTree {
       }
     }
     return root;
+  }
+
+  getMaximumHeight(root) {
+    if (!root) {
+      return 0;
+    }
+    const leftHeight = this.getMaximumHeight(root.left);
+    const rightHeight = this.getMaximumHeight(root.right);
+    return 1 + Math.max(leftHeight, rightHeight);
   }
 }
 
