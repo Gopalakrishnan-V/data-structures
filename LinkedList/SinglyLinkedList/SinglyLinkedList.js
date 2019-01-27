@@ -129,6 +129,9 @@ class SinglyLinkedList {
   }
 
   print(head) {
+    if (!head) {
+      console.log("Cannot print the list. Please check the head.");
+    }
     let current = head;
     console.log("List: ");
     while (current) {

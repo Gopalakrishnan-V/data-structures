@@ -48,6 +48,5 @@ let sll2 = new SinglyLinkedList();
 sll2.insertAtEnd(102);
 sll2.insertAtEnd(104);
 
-
 const mergedHead = merge(sll1.head, sll2.head);
 new SinglyLinkedList().print(mergedHead);
