@@ -105,7 +105,7 @@ class QuickSort {
     let swapIndex = start;
 
     for (let i = start + 1; i <= end; i++) {
-      if (pivot > arr[i]) {
+      if (arr[i] < pivot) {
         swapIndex++;
         swap(arr, swapIndex, i);
       }
