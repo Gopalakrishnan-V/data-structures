@@ -33,11 +33,11 @@ class MinBinaryHeap {
     } else if (this.values.length === 1) {
       return this.values.pop();
     } else {
-      const max = this.values[0];
+      const min = this.values[0];
       const last = this.values.pop();
       this.values[0] = last;
       this.sinkDown();
-      return max;
+      return min;
     }
   }
 
@@ -70,6 +70,6 @@ class MinBinaryHeap {
       }
     }
   }
-};
+}
 
 module.exports = MinBinaryHeap;
