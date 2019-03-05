@@ -117,7 +117,7 @@ class WeightedGraph {
 
     while (priorityQueue.values.length) {
       let smallest = priorityQueue.dequeue().value;
-      if ((smallest === end)) {
+      if (smallest === end) {
         let result = [];
         while (previous[smallest]) {
           result.push(smallest);
