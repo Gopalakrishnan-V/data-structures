@@ -1,4 +1,4 @@
-const SinglyLinkedList = require("./SinglyLinkedList");
+const SinglyLinkedList = require("./singly-linked-list");
 
 let sll = new SinglyLinkedList();
 sll.insertAtEnd(1);

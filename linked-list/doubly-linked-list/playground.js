@@ -1,4 +1,4 @@
-const DoublyLinkedList = require("./DoublyLinkedList");
+const DoublyLinkedList = require("./doubly-linked-list");
 
 const dll = new DoublyLinkedList();
 dll.insertAtEnd(1);

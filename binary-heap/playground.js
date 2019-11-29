@@ -1,6 +1,6 @@
-const MinBinaryHeap = require("./MinBinaryHeap");
-const MaxBinaryHeap = require("./MaxBinaryHeap");
-const PriorityQueue = require("./PriorityQueue");
+const MinBinaryHeap = require("./min-binary-heap");
+const MaxBinaryHeap = require("./max-binary-heap");
+const PriorityQueue = require("./priority-queue");
 
 // let maxBinaryHeap = new MaxBinaryHeap();
 // maxBinaryHeap.insert(1);

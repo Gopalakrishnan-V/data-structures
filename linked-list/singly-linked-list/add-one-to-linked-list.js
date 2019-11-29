@@ -1,4 +1,4 @@
-const SinglyLiinkedList = require("./SinglyLinkedList");
+const SinglyLiinkedList = require("./singly-linked-list");
 
 class Node {
   constructor(data) {

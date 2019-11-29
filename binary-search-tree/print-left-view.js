@@ -1,4 +1,4 @@
-const BinarySearchTree = require("./BinarySearchTree");
+const BinarySearchTree = require("./binary-search-tree");
 
 function printLeftView(root) {
   let maxLevel = 0;

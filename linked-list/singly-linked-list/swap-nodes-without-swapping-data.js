@@ -1,4 +1,4 @@
-const SinglyLinkedList = require("./SinglyLinkedList");
+const SinglyLinkedList = require("./singly-linked-list");
 
 function swapNodes(head, x, y) {
   if (!head) {

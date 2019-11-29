@@ -1,4 +1,4 @@
-const BinarySearchTree = require("./BinarySearchTree");
+const BinarySearchTree = require("./binary-search-tree");
 class Node {
     constructor(data) {
       this.data = data;

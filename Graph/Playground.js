@@ -1,5 +1,5 @@
-const Graph = require("./Graph");
-const WeightedGraph = require("./WeightedGraph");
+const Graph = require("./graph");
+const WeightedGraph = require("./weighted-graph");
 
 // let graph = new Graph();
 // graph.addVertex("Agara");
