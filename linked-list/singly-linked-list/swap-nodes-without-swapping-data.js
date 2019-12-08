@@ -7,8 +7,6 @@ function swapNodes(head, x, y) {
     return head;
   }
 
-  let newHead = null;
-
   //Find X
   let previousX = null;
   let currentX = head;
@@ -30,25 +28,29 @@ function swapNodes(head, x, y) {
     return head;
   }
 
-  //If x is not the head
   if (previousX) {
+    // If x is not the head
     previousX.next = currentY;
   } else {
-    newHead = currentY;
+    // x is the head
+    head = currentY;
   }
 
-  //If y is not the head
   if (previousY) {
+    // If y is not the head
     previousY.next = currentX;
   } else {
-    currentX = head;
+    // y is the head
+    head = currentX;
   }
 
+  //Swap next of both nodes
   const temp = currentX.next;
   currentX.next = currentY.next;
   currentY.next = temp;
 
-  return newHead ? newHead : head;
+  this.head = head;
+  return head;
 }
 
 let sll = new SinglyLinkedList();
@@ -60,4 +62,4 @@ sll.insertAtEnd(5);
 sll.insertAtEnd(6);
 
 sll.head = swapNodes(sll.head, 2, 5);
-sll.print();
+sll.print(sll.head);
